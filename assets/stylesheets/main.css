@@ -66,20 +66,30 @@ body {
 
 .modal {
     display: none;
-    font-size: 10px;
+    position: fixed;
+    left: 20%;
+    top: 15%;
+    font-size: 20px;
     z-index: 1;
-}
-
-.modalContent {
-    background-color: aqua;
+    background-color: lightgrey;
     padding: 20px;
+    border: 1px solid #888;
+    overflow: auto;
+    width: 60%;
+    height: 20%;
 }
 
 .close {
+    color: #888;
     float: right;
+    font-weight: bold;
 }
 
-
+.close:hover,
+.close:focus {
+    color: black;
+    cursor: pointer;
+}
 /* art pieces */
 
 .row {
