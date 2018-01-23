@@ -4,22 +4,24 @@
     <meta charset="UTF-8" />
     <title>Merijn Hos</title>
     <link rel="stylesheet" href="assets/stylesheets/main.css">
-
+    <script src="app.js" type="text/javascript"></script>
   </head>
   <body>
     <img class="artistName" src="assets/images/artistName.jpg">
     <div>
         <div class="topTab">
-            <p onClick="filter('biography', 'artistInfo')">biography</p>
-            <p onClick="filter('contact', 'artistInfo')">contact</p>
+            <p onClick="displayModal('biography')">biography</p>
+            <p onClick="displayModal('contact')">contact</p>
          </div>
-        <div class="artistInfo biography">
-            <p>biography text</p>
-            <br>
-        </div>
-         <div class="artistInfo contact">
-            <p>contact info blahblahblah</p>
-             <br>
+        <div class="modals">
+            <div class="modal biography">
+                <p>biography text</p>
+                <p class="closeModal" onClick="closeModal()">&times;</p>
+            </div>
+            <div class="modal contact">
+                <p>contact info blahblahblah</p>
+                <p class="closeModal" onClick="closeModal()">&times;</p>
+            </div>
         </div>
     </div>
     <div class="images">
@@ -28,32 +30,32 @@
                 <img src="assets/images/brummel.jpg">
                 <p class="imageName">Brummel Magazine</p>
                 <div class="filter">
-                    <p onClick="filter('filterIllustration', 'image')">illustration</p>
+                    <p onClick="filter('filterIllustration')">illustration</p>
                 </div>
             </div>
             <div class="image filterAnimation filterIllustration">
                 <img src="assets/images/nike.png">
                 <p class="imageName">Nike Vapor Max</p>
                 <div class="filter">
-                    <p onClick="filter('filterIllustration', 'image')">illustration</p>
-                    <p onClick="filter('filterAnimation', 'image')">animation</p>
+                    <p onClick="filter('filterIllustration')">illustration</p>
+                    <p onClick="filter('filterAnimation')">animation</p>
                 </div>
             </div>
             <div class="image filterIllustration filterAnimation">
                <img src="assets/images/sun.png">
                 <p class="imageName">Sun Sun Sun</p>
                 <div class="filter">
-                    <p onClick="filter('filterIllustration', 'image')">illustration</p>
-                    <p onClick="filter('filterAnimation', 'image')">animation</p>
+                    <p onClick="filter('filterIllustration')">illustration</p>
+                    <p onClick="filter('filterAnimation')">animation</p>
                 </div>
             </div>
             <div class="image filterIllustration filterArtDirection filterAnimation">
                 <img src="assets/images/down.jpg">
                 <p class="imageName">Down The Rabbit Hole 2017</p>
                 <div class="filter">
-                    <p onClick="filter('filterIllustration', 'image')">illustration</p>
-                    <p onClick="filter('filterArtDirection', 'image')">art direction</p>
-                    <p onClick="filter('filterAnimation', 'image')">animation</p>
+                    <p onClick="filter('filterIllustration')">illustration</p>
+                    <p onClick="filter('filterArtDirection')">art direction</p>
+                    <p onClick="filter('filterAnimation')">animation</p>
                 </div>
             </div>
         </div>
@@ -62,45 +64,32 @@
                 <img src="assets/images/the.jpg">
                 <p class="imageName">The Conference 2017</p>
                 <div class="filter">
-                    <p onClick="filter('filterArtDirection', 'image')">art direction</p>
-                    <p onClick="filter('filterIllustration', 'image')">illustration</p>
+                    <p onClick="filter('filterArtDirection')">art direction</p>
+                    <p onClick="filter('filterIllustration')">illustration</p>
                 </div>
             </div>
             <div class="image filterIllustration">
                 <img src="assets/images/computer.jpg">
                 <p class="imageName">Computer Arts</p>
                 <div class="filter">
-                    <p onClick="filter('filterIllustration', 'image')">illustration</p>
+                    <p onClick="filter('filterIllustration')">illustration</p>
                 </div>
             </div>
             <div class="image filterIllustration">
                 <img src="assets/images/gradient.png">
                 <p class="imageName">Gradient Exploration</p>
                 <div class="filter">
-                    <p onClick="filter('filterIllustration', 'image')">illustration</p>
+                    <p onClick="filter('filterIllustration')">illustration</p>
                 </div>
             </div>
             <div class="image filterIllustration">
                 <img src="assets/images/calvin.jpg">
                 <p class="imageName">Calvin Klein</p>
                 <div class="filter">
-                    <p onClick="filter('filterIllustration', 'image')">illustration</p>
+                    <p onClick="filter('filterIllustration')">illustration</p>
                 </div>
             </div>
         </div>
-
     </div>
-  <script>
-      function filter(classToDisplay, classToHide) {
-        var imagesToDisplay = document.getElementsByClassName(classToDisplay);
-        var allImages = document.getElementsByClassName(classToHide);
-        for (i = 0; i < allImages.length; i++) {
-          allImages[i].style.display = "none";
-        }
-        for (i = 0; i < imagesToDisplay.length; i++) {
-          imagesToDisplay[i].style.display = "inline-block";
-        }
-      }
-  </script>
   </body>
 </htmthel>
