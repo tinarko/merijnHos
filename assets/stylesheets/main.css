@@ -79,14 +79,13 @@ body {
     height: 20%;
 }
 
-.close {
+.closeModal {
     color: #888;
     float: right;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.closeModal:hover {
     color: black;
     cursor: pointer;
 }

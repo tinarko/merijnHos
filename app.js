@@ -8,6 +8,7 @@ function filter(classToDisplay) {
     imagesToDisplay[i].style.display = "inline-block";
   }
 };
+
 function displayModal(classToDisplay) {
   var allModals = document.getElementsByClassName('modal');
   for (i = 0; i < allModals.length; i++) {
@@ -18,8 +19,7 @@ function displayModal(classToDisplay) {
     }
   }
 }
-function close() {
-  console.log('hi')
+function closeModal() {
   var allModals = document.getElementsByClassName('modal');
   for (i = 0; i < allModals.length; i++) {
   allModals[i].style.display = "none";
