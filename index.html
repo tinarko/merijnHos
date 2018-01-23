@@ -10,16 +10,20 @@
     <img class="artistName" src="assets/images/artistName.jpg">
     <div>
         <div class="topTab">
-            <p onClick="filter('biography', 'artistInfo')">biography</p>
-            <p onClick="filter('contact', 'artistInfo')">contact</p>
+            <p onClick="displayModal('biography')">biography</p>
+            <p onClick="displayModal('contact')">contact</p>
          </div>
-        <div class="artistInfo biography">
-            <p>biography text</p>
-            <br>
-        </div>
-         <div class="artistInfo contact">
-            <p>contact info blahblahblah</p>
-             <br>
+        <div class="modal">
+            <div class="modalContent">
+                <div class="biography">
+                    <p>biography text</p>
+                    <span class="close" onClick="close('biography')">&times;</span>
+                </div>
+                <div class="contact">
+                    <p>contact info blahblahblah</p>
+                    <span class="close" onClick="close('contact')">&times;</span>
+                </div>
+            </div>
         </div>
     </div>
     <div class="images">
@@ -100,7 +104,16 @@
         for (i = 0; i < imagesToDisplay.length; i++) {
           imagesToDisplay[i].style.display = "inline-block";
         }
+      };
+      function displayModal(classToDisplay) {
+        var modal = document.getElementsByClassName(classToDisplay)[0];
+        modal.style.display = "block";
       }
+      function close(className) {
+        var modal = document.getElementsByClassName(className)[0];
+        modal.style.display = "none";
+      }
+
   </script>
   </body>
 </htmthel>

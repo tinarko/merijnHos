@@ -64,9 +64,19 @@ body {
     margin: 0 10px 20px 0;
 }
 
-.artistInfo {
+.modal {
     display: none;
     font-size: 10px;
+    z-index: 1;
+}
+
+.modalContent {
+    background-color: aqua;
+    padding: 20px;
+}
+
+.close {
+    float: right;
 }
 
 
