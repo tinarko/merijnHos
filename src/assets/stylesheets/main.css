@@ -57,11 +57,18 @@ body {
     margin: 10px 0 10px 0;
 }
 
-.artistInfo p {
+
+.topTab p {
     display: inline-block;
     font-size: 13px;
     margin: 0 10px 20px 0;
 }
+
+.artistInfo {
+    display: none;
+    font-size: 10px;
+}
+
 
 /* art pieces */
 
@@ -71,6 +78,7 @@ body {
     margin: 0 0 10px 0;
 
 }
+
 .image {
     display: inline-block;
 }
@@ -84,13 +92,13 @@ body {
     margin: 5px 0 2px 0;
 }
 
-.toggle {
+.filter {
     display: flex;
     justify-content: center;
     font-size: 7px;
     color: gray;
 }
 
-.toggle p {
+.filter p {
     margin: 0 2px 0 2px;
 }
